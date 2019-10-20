@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/addTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/addDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/desc"
+                android:textSize="18sp"
+                android:textStyle="italic"/>
+
+            <EditText
+                android:id="@+id/addTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tag"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Color"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:onClick="buttonColor"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorPink"
+                    android:id="@+id/btncolorPink"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    />
+
+                <Button
+                    android:onClick="buttonColor"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorBlue"
+                    android:id="@+id/btncolorBlue"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+                <Button
+                    android:onClick="buttonColor"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorLightBlue"
+                    android:id="@+id/btncolorLightBlue"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+                <Button
+                    android:onClick="buttonColor"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorBrown"
+                    android:id="@+id/btncolorLightBrown"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+                <Button
+                    android:onClick="buttonColor"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorYellow"
+                    android:id="@+id/btncolorYellow"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:background="#f0f0f0"
+                android:layout_marginTop="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Note"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
