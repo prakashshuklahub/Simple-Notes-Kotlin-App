@@ -5,21 +5,32 @@ Part of Android Jetpack. Android architecture components are a collection of lib
 you design robust, testable, and maintainable apps.
 
 
-# Architecture
+<h4>Architecture</h4>
 
 MVVM is one of the architectural patterns which enhances separation of concerns, it allows
 separating the user interface logic from the business (or the back-end) logic. Its target 
 (with other MVC patterns goal) is to achieve the following principle “Keeping UI code simple 
 and free of app logic in order to make it easier to manage”.
 
-<h2>ADD NEW NOTE</h2>
-<img src="app/src/main/res/drawable/add.gif" width="150" >   
-<h2>EDIT NOTE</h2>
-<img src="app/src/main/res/drawable/edit2.gif" width="150" ></DIV>
-<h2>DELETE NOTE</h2>
-<img src="app/src/main/res/drawable/delete.gif" width="150" >
+<h4>Screenshots</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Add Notes</th>
+<th align="center">Edit Notes</th>
+<th align="center">Delete Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <img src="app/src/main/res/drawable/add.gif" width="150" ></td>
+<td> <img src="app/src/main/res/drawable/edit2.gif" width="150" ></td>
+<td> <img src="app/src/main/res/drawable/delete.gif" width="150" ></td>
+</tr>
+</tbody>
+</table>
 
-# Architecture Components used in the app are as follows
+<h4>Architecture Components used in the app are as follows</h4>
 <ul>
 <li>Lifecycles: It manages activity and fragment lifecycles of our app, survives configuration changes,
 avoids memory leaks and easily loads data into our UI.</li>
@@ -35,11 +46,5 @@ that isn't destroyed on app rotations.</li>
 <img src="app/src/main/res/drawable/arc.png" width="700" >
 <br>
 
-# Thanks for reading
-<img src="https://img.shields.io/github/forks/LanguageXX/Simple-Notes-Kotlin-App?style=social" >
-<img src="https://img.shields.io/github/stars/LanguageXX/Simple-Notes-Kotlin-App?style=social">
-<img src="https://img.shields.io/github/watchers/LanguageXX/Simple-Notes-Kotlin-App?style=social">
-<br>
-<br>
-<br>
-<img src="https://img.shields.io/badge/Activity%20Looking%20for%20Android%20Internship-Hi%20%2C%20%20email%20me%20prakashshukla1820%40gmail.com-green" >
+
+
