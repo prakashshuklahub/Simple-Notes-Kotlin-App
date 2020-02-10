@@ -20,7 +20,7 @@
                 android:id="@+id/addTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Title"
+                android:hint="@string/title"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 />
@@ -37,7 +37,7 @@
                 android:id="@+id/addTag"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tag"
+                android:hint="@string/tag"
                 android:textSize="18sp"
                 android:textStyle="italic" />
 
@@ -49,7 +49,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Color"
+                    android:text="@string/color"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
                     android:textSize="16sp"
@@ -65,7 +65,7 @@
                     android:layout_height="30dp"
                     />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:onClick="buttonColor"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
@@ -100,7 +100,6 @@
                     android:id="@+id/btncolorYellow"
                     android:layout_width="30dp"
                     android:layout_height="30dp"/>
-
             </LinearLayout>
 
             <Button
@@ -109,7 +108,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Save Note"
+                android:text="@string/save_note"
                 android:layout_gravity="center"/>
         </LinearLayout>
 
