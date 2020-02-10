@@ -20,9 +20,12 @@
                 android:id="@+id/editTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Title"
+                android:text="@string/title"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:autofillHints="@string/title"
+                android:hints="@string/title"
+                android:inputType="text" />
 
             <EditText
                 android:id="@+id/editDescription"
@@ -30,15 +33,20 @@
                 android:layout_height="wrap_content"
                 android:text="@string/desc"
                 android:textSize="18sp"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:hint="@string/desc"
+                android:autofillHints="@string/desc" />
 
             <EditText
                 android:id="@+id/editTag"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tag"
+                android:text="@string/tag"
                 android:textSize="18sp"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:autohints="@string/tag"
+                android:autofillHints="@string/tag"
+                android:inputType="text" />
 
             <LinearLayout
                 android:scrollbars="horizontal"
@@ -51,12 +59,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    android:text="Color"
+                    android:text="@string/color"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <Button
-                    android:onClick="buttonColor"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@color/colorPink"
@@ -66,7 +73,6 @@
                     />
 
                 <Button
-                    android:onClick="buttonColor"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@color/colorBlue"
@@ -75,7 +81,6 @@
                     android:layout_height="30dp"/>
 
                 <Button
-                    android:onClick="buttonColor"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@color/colorLightBlue"
@@ -84,7 +89,6 @@
                     android:layout_height="30dp"/>
 
                 <Button
-                    android:onClick="buttonColor"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@color/colorLightBrown"
@@ -93,7 +97,6 @@
                     android:layout_height="30dp"/>
 
                 <Button
-                    android:onClick="buttonColor"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@color/colorYellow"
@@ -110,7 +113,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="32dp"
                 android:background="#f0f0f0"
-                android:text="Save Note" />
+                android:text="@string/save_note" />
         </LinearLayout>
 
 

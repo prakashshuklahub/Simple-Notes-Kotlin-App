@@ -1,15 +1,15 @@
 package com.languagexx.simplenotes.repository
 
+import android.util.Log
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.liveData
 import com.languagexx.simplenotes.persistence.NoteDao
 import com.languagexx.simplenotes.persistence.Note
-import com.languagexx.simplenotes.util.Resource
 import kotlinx.coroutines.*
 import javax.inject.Inject
 
 class NoteRepository @Inject constructor(val noteDao: NoteDao) {
 
+    // Method #1
     //function to insert note in database
     fun insert(note: Note) {
         CoroutineScope(Dispatchers.IO).launch {
@@ -17,6 +17,7 @@ class NoteRepository @Inject constructor(val noteDao: NoteDao) {
         }
     }
 
+    // Method #2
     //function to delete note in database
     fun delete(note: Note) {
         CoroutineScope(Dispatchers.IO).launch {
@@ -24,30 +25,27 @@ class NoteRepository @Inject constructor(val noteDao: NoteDao) {
         }
     }
 
+    // Method #3
     //function to delete note by Id in database
-    fun deleteById(id:Int){
+    fun deleteById(id: Int) {
         CoroutineScope(Dispatchers.IO).launch {
             noteDao.deleteById(id)
         }
     }
 
+    // Method #4
     //function to update note in database
     fun update(note: Note) {
         CoroutineScope(Dispatchers.IO).launch {
             noteDao.update(note)
+            Log.e("DEBUG", "update is called in repo")
+
         }
     }
 
+    // Method #5
     //function to get all notes in database
-    fun getAllNotes(): LiveData<Resource<List<Note>>> = liveData {
-
-        //Loading
-        emit(Resource.loading())
-
-        //Find Data
-        if (noteDao.getAllNotes().size < 0) {
-            emit(Resource.error("No Notes Found"))
-        } else
-            emit(Resource.success(noteDao.getAllNotes()))
-        }
+    fun getAllNotes(): LiveData<List<Note>>{
+        return noteDao.getAllNotes()
+    }
 }

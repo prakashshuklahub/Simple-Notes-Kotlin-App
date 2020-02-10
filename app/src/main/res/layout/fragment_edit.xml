@@ -20,7 +20,7 @@
                 android:id="@+id/editTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Title"
+                android:text="@string/title"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -39,69 +39,6 @@
                 android:text="Tag"
                 android:textSize="18sp"
                 android:textStyle="italic" />
-
-            <LinearLayout
-                android:scrollbars="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="Color"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:onClick="buttonColor"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@color/colorPink"
-                    android:id="@+id/btncolorPink"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    />
-
-                <Button
-                    android:onClick="buttonColor"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@color/colorBlue"
-                    android:id="@+id/btncolorBlue"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"/>
-
-                <Button
-                    android:onClick="buttonColor"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@color/colorLightBlue"
-                    android:id="@+id/btncolorLightBlue"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"/>
-
-                <Button
-                    android:onClick="buttonColor"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@color/colorLightBrown"
-                    android:id="@+id/btncolorLightBrown"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"/>
-
-                <Button
-                    android:onClick="buttonColor"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@color/colorYellow"
-                    android:id="@+id/btncolorYellow"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"/>
-
-            </LinearLayout>
 
             <Button
                 android:id="@+id/btnEdit"

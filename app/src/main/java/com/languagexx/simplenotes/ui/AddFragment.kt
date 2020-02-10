@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat.getColor
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.languagexx.simplenotes.R
@@ -18,14 +17,13 @@ import javax.inject.Inject
 
 class AddFragment : DaggerFragment() {
 
-    lateinit var color: String
-
     @Inject
     lateinit var viewmodelProviderFactory: ViewModelProviderFactory
 
     lateinit var noteViewModel: NoteViewModel
 
 
+    // Method #1
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,10 +32,10 @@ class AddFragment : DaggerFragment() {
         return inflater.inflate(R.layout.fragment_add, container, false)
     }
 
+    // Method #2
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        changeColorOfButton()
         setupViewModel()
 
         btnAdd.setOnClickListener {
@@ -45,6 +43,7 @@ class AddFragment : DaggerFragment() {
         }
     }
 
+    // Method #3
     private fun saveNoteToDatabase() {
 
         //Save Notes WHEN app is minimized or back button is clicked [#onPause method will be called]
@@ -71,13 +70,16 @@ class AddFragment : DaggerFragment() {
 
     }
 
+    // Method #4
     override fun onDestroyView() {
         super.onDestroyView()
         saveNoteToDatabase()
     }
 
+
+    // Method #5
     private fun saveNote() {
-        val note = Note(0,addTitle.text.toString(),addDescription.text.toString(),color,addTag.text.toString())
+        val note = Note(0,addTitle.text.toString(),addDescription.text.toString(),addTag.text.toString())
 
         //If title is null set Empty Title
         if (addTitle.text.isNullOrEmpty()) {
@@ -92,36 +94,15 @@ class AddFragment : DaggerFragment() {
         }
     }
 
+    // Method #6
     fun validations(): Boolean {
         return !(addTitle.text.isNullOrEmpty()
                 && addDescription.text.isNullOrEmpty()
                 && addTag.text.isNullOrEmpty())
     }
 
-    private fun changeColorOfButton() {
-        color = "#ffffff"
 
-        btncolorBlue.setOnClickListener {
-            cardView.setCardBackgroundColor(getColor(context!!, R.color.colorBlue))
-            color = "#64FFDA"
-        }
-        btncolorLightBlue.setOnClickListener {
-            cardView.setCardBackgroundColor(getColor(context!!, R.color.colorLightBlue))
-            color = "#BBDEFB"
-        }
-        btncolorLightBrown.setOnClickListener {
-            cardView.setCardBackgroundColor(getColor(context!!, R.color.colorLightBrown))
-            color = "#A1887F"
-        }
-        btncolorPink.setOnClickListener {
-            cardView.setCardBackgroundColor(getColor(context!!, R.color.colorPink))
-        }
-        btncolorYellow.setOnClickListener {
-            cardView.setCardBackgroundColor(getColor(context!!, R.color.colorYellow))
-            color = "#FFC400"
-        }
-    }
-
+    // Method #7
     private fun setupViewModel() {
         noteViewModel = ViewModelProvider(this,viewmodelProviderFactory).get(NoteViewModel::class.java)
     }

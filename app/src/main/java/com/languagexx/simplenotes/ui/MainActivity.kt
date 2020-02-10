@@ -12,6 +12,7 @@ class MainActivity : DaggerAppCompatActivity() {
 
     lateinit var navController: NavController
 
+    // Method #1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,18 +23,17 @@ class MainActivity : DaggerAppCompatActivity() {
         fab.setOnClickListener {
             onFloatingClicked()
         }
-
     }
 
+    // Method #2
     private fun onFloatingClicked() {
         navController.navigate(R.id.action_listFragment_to_addFragment)
         fab.hide()
     }
 
+    // Method #3
     fun showFloatingButton(){
         fab.show()
         fab.visibility = View.VISIBLE
     }
-
-
 }
