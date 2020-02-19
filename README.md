@@ -69,6 +69,10 @@ that isn't destroyed on app rotations.</li>
 <li><a href="https://developer.android.com/kotlin/coroutines" target="_blank">Coroutines</a></li>
 <li><a href="https://material.io/develop/android/docs/getting-started/" target="_blank">Material library</a></li>
 <li><a href="https://developer.android.com/guide/navigation/navigation-getting-started" target="_blank">Navigation Component</a></li>
+  <li><a href="https://developer.android.com/guide/navigation/navigation-pass-data" target="_blank">Safe Args Plugin</a></li>
+  
+  
+  
 </ul>
 
 
