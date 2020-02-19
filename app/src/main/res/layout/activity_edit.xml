@@ -24,7 +24,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:autofillHints="@string/title"
-                android:hints="@string/title"
+                android:hint="@string/title"
                 android:inputType="text" />
 
             <EditText
@@ -44,7 +44,7 @@
                 android:text="@string/tag"
                 android:textSize="18sp"
                 android:textStyle="italic"
-                android:autohints="@string/tag"
+                android:hint="@string/tag"
                 android:autofillHints="@string/tag"
                 android:inputType="text" />
 

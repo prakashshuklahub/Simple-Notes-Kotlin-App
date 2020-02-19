@@ -99,7 +99,7 @@ class ListFragment : DaggerFragment(),
                 val position = viewHolder.adapterPosition
                 noteViewModel.delete(allNotes.get(position))
                 val note = allNotes.get(position)
-                Toast.makeText(activity, "Note Deleted ${note.id}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, "Note Deleted", Toast.LENGTH_SHORT).show()
             }
         }
     }

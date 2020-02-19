@@ -1,10 +1,8 @@
 package com.languagexx.simplenotes.di
 
 import androidx.lifecycle.ViewModel
-
 import com.languagexx.simplenotes.ui.NoteViewModel
 import dagger.Binds
-import dagger.MapKey
 import dagger.Module
 import dagger.multibindings.IntoMap
 
@@ -16,5 +14,5 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(NoteViewModel::class)
-    abstract fun bindMainViewModel(moviesViewModel: NoteViewModel): ViewModel
+    abstract fun bindMainViewModel(notesViewModel: NoteViewModel): ViewModel
 }
